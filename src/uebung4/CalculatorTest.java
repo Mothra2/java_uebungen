@@ -9,14 +9,27 @@ public class CalculatorTest {
 	public static void testAddDoubleDouble() {
         //Autor: Jörg Holger
         //Testdatum: 09.5.2015
-        //Getestet wird die Methode add() mit einem negativen Eingabewert mit ungerader Parität in Binärdarstellung
-        //Vorbedingungen: zu testender Wert befindet sich im Bereich der Integer-Werte, ist negativ, ungerade Parität
-        //Eingabe: -38
-        //erwarteter Ausgabe:	"false"
-		//Testergebnis: bestanden!
+        //Getestet wird die Methode add() mit ...
+        //Vorbedingungen: 
+        //Eingabe: 
+        //erwarteter Ausgabe:
+		//Testergebnis: 
 		
-		System.out.println(Parity.isEvenParity(-38));
-		System.out.println();
+		
+		
+	}
+	
+	public static void testAddDoubleDouble() {
+        //Autor: Jörg Holger
+        //Testdatum: 09.5.2015
+        //Getestet wird die Methode add() mit ...
+        //Vorbedingungen: 
+        //Eingabe: 
+        //erwarteter Ausgabe:
+		//Testergebnis: 
+		
+		
 		
 	}	
+	
 }
