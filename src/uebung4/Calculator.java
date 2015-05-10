@@ -5,7 +5,7 @@ package uebung4;
  */
 
 public class Calculator {
-
+		
 	public static double add (double number1, double number2) {
 		return number1+number2;
 	}
@@ -19,108 +19,120 @@ public class Calculator {
 	}
 	
 	public static double div (double number1, double number2) {
-		return number1/number2;
+		if(number2 != 0)
+			return number1/number2;
+		else
+			return Double.NaN;
+		
 	}
 			
 	public static String resultString (String number1, String operator, String number2, double number3) {
+		// gibt den Ergebnisstring aus, wenn das Ergebnis eine gebrochene Zahl ist
 		return number1 +" " +operator +" " +number2 +" ist " +number3;
 	}
 	
 	public static String resultString (String number1, String operator, String number2, int number3) {
+		// gibt den Ergebnisstring aus, wenn das Ergebnis eine ganze Zahl ist
 		return number1 +" " +operator +" " +number2 +" ist " +number3;
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		switch (args[1]) {
+	public static void calculate(String number1, String operator, String number2) {
+		
+		switch (operator) {
+			// Die mithilfe des Parameters "operator" gewählte Methode wird aufgerufen.
+			// In der if-Bedingung wird geprüft, ob es sich bei mindestens einer der beiden Zahlen
+			// um eine gebrochene Zahl handelt. Ist dies der Fall, wird der Double-Rückgabewert der
+			// entsprechenden Rechenmethode als Ergebnis ausgegeben. Sind beide Zahlen ganze Zahlen,
+			// wird das Ergebnis als Integer gecastet und dann ausgegeben.
 		
 			case "add":
-				if (Double.parseDouble(args[0]) % (int) Double.parseDouble(args[0]) != 0
-						|| Double.parseDouble(args[2]) % (int) Double.parseDouble(args[2]) != 0) {
+				if (Double.parseDouble(number1) % (int) Double.parseDouble(number1) != 0
+						|| Double.parseDouble(number2) % (int) Double.parseDouble(number2) != 0) {
 	
-					System.out.println(Calculator.resultString(
-							args[0],
-							args[1],
-							args[2],
-							Calculator.add(
-									Double.parseDouble(args[0]),
-									Double.parseDouble(args[2]))));
+					System.out.println(resultString(
+							number1,
+							operator,
+							number2,
+							add(
+									Double.parseDouble(number1),
+									Double.parseDouble(number2))));
 				} else {
 	
-					System.out.println(Calculator.resultString(
-							args[0],
-							args[1],
-							args[2], 
-							(int) Calculator.add(
-									Double.parseDouble(args[0]),
-									Double.parseDouble(args[2]))));
+					System.out.println(resultString(
+							number1,
+							operator,
+							number2, 
+							(int) add(
+								Double.parseDouble(number1),
+								Double.parseDouble(number2))));
 				}
 				break;
 
 			case "sub":
-				if (Double.parseDouble(args[0]) % (int) Double.parseDouble(args[0]) != 0
-						|| Double.parseDouble(args[2]) % (int) Double.parseDouble(args[2]) != 0) {
+				if (Double.parseDouble(number1) % (int) Double.parseDouble(number1) != 0
+						|| Double.parseDouble(number2) % (int) Double.parseDouble(number2) != 0) {
 	
-					System.out.println(Calculator.resultString(
-							args[0],
-							args[1],
-							args[2],
-							Calculator.sub(
-									Double.parseDouble(args[0]),
-									Double.parseDouble(args[2]))));
+					System.out.println(resultString(
+							number1,
+							operator,
+							number2,
+							sub(
+								Double.parseDouble(number1),
+								Double.parseDouble(number2))));
 				} else {
 	
-					System.out.println(Calculator.resultString(
-							args[0],
-							args[1],
-							args[2],
-							(int) Calculator.sub(
-									Double.parseDouble(args[0]),
-									Double.parseDouble(args[2]))));
+					System.out.println(resultString(
+							number1,
+							operator,
+							number2,
+							(int) sub(
+								Double.parseDouble(number1),
+								Double.parseDouble(number2))));
 				}
 				break;
 	
 			case "mul":
-				if (Double.parseDouble(args[0]) % (int) Double.parseDouble(args[0]) != 0
-						|| Double.parseDouble(args[2]) % (int) Double.parseDouble(args[2]) != 0) {
+				if (Double.parseDouble(number1) % (int) Double.parseDouble(number1) != 0
+						|| Double.parseDouble(number2) % (int) Double.parseDouble(number2) != 0) {
 	
-					System.out.println(Calculator.resultString(
-							args[0],
-							args[1],
-							args[2],
-							Calculator.mul(
-									Double.parseDouble(args[0]),
-									Double.parseDouble(args[2]))));
+					System.out.println(resultString(
+							number1,
+							operator,
+							number2,
+							mul(
+								Double.parseDouble(number1),
+								Double.parseDouble(number2))));
 				} else {
 	
-					System.out.println(Calculator.resultString(
-							args[0],
-							args[1],
-							args[2],
-							(int) Calculator.mul(
-									Double.parseDouble(args[0]),
-									Double.parseDouble(args[2]))));
+					System.out.println(resultString(
+							number1,
+							operator,
+							number2,
+							(int) mul(
+								Double.parseDouble(number1),
+								Double.parseDouble(number2))));
 				}
 				break;
 	
 			case "div":
-				if (Double.parseDouble(args[0]) % (int) Double.parseDouble(args[0]) != 0
-						|| Double.parseDouble(args[2]) % (int) Double.parseDouble(args[2]) != 0) {
+				if (Double.parseDouble(number1) % (int) Double.parseDouble(number1) != 0
+						|| Double.parseDouble(number2) % (int) Double.parseDouble(number2) != 0) {
 	
-					System.out.println(Calculator.resultString(
-							args[0],
-							args[1],
-							args[2],
-							Calculator.div(
-									Double.parseDouble(args[0]),
-									Double.parseDouble(args[2]))));
+					System.out.println(resultString(
+							number1,
+							operator,
+							number2,
+							div(
+								Double.parseDouble(number1),
+								Double.parseDouble(number2))));
 				} else {
 	
-					System.out.println(Calculator.resultString(args[0],
-							args[1],
-							args[2], (int) Calculator.div(
-									Double.parseDouble(args[0]),
-									Double.parseDouble(args[2]))));
+					System.out.println(resultString(
+							number1,
+							operator,
+							number2, (int) div(
+								Double.parseDouble(number1),
+								Double.parseDouble(number2))));
 				}
 				break;
 	
