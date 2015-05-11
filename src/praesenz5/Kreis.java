@@ -2,21 +2,21 @@ package praesenz5;
 
 public class Kreis extends Figur {
 	
-	private int radius;
+	private double radius;
 	
 	public Kreis() {
 	}
 	
-	public Kreis(Punkt p, int r) {
+	public Kreis(Punkt p, double r) {
 		super(p);
 		radius = r;
 	}
 	
-	public int getRadius() {	
+	public double getRadius() {	
 		return radius;
 	}
 	
-	public void setRadius(int r) {
+	public void setRadius(double r) {
 		radius = r;
 	}
 	
