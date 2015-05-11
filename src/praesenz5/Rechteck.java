@@ -24,9 +24,13 @@ public class Rechteck extends Quadrat {
 	public int berechneFlaeche() {
 		return getBreite() * laenge;
 	}
-		
+	
+	public int berechneUmfang() {
+		return 2*getBreite() + 2*laenge;
+	}
+	
  	public String toString() {
- 		return "Breite: " +getBreite() +"Länge: " +getLaenge() +"Fläche: " +berechneFlaeche();
+ 		return "Breite: " +getBreite() +" Länge: " +getLaenge() +" Fläche: " +berechneFlaeche();
  	}
 
 }

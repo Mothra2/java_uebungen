@@ -5,6 +5,8 @@ public class Quadrat extends Figur {
 	private int breite;
 	
 	public Quadrat() { 
+		super();
+		breite = 0;
 	}
 	
 	public Quadrat(Punkt p, int b) {
@@ -23,8 +25,12 @@ public class Quadrat extends Figur {
 	public int berechneFlaeche() {
 		return breite * breite;
 	}
-		
+
+	public int berechneUmfang() {
+		return 4*breite;
+	}
+	
 	public String toString() {
-		return "Anker: " +getAnker() +"Breite: "  +breite +"Fläche: " +berechneFlaeche();
+		return "Anker: " +getAnker() +" Breite: "  +breite +" Fläche: " +berechneFlaeche();
 	}
 }
