@@ -1,46 +1,46 @@
 package praesenz5;
 
-public class Schablone extends Kreis {
-	private Quadrat inQuadrat;
+public class Schablone extends Quadrat {
+	private Kreis aussenKreis;
 	
 	public Schablone() {
 		super();
-		setInQuadrat(new Quadrat());
+		setAussenKreis(new Kreis());
 	}
 	
-	public Schablone(Punkt p, double r, int breite) {
-		super(p,r);
-		setInQuadrat(new Quadrat(new Punkt(p.getX()-breite/2, p.getY()-breite/2), breite));
+	public Schablone(Punkt p, int breite, double radius) {
+		super(p,breite);
+		setAussenKreis(new Kreis(new Punkt(p.getX()+breite/2, p.getY()-breite/2), radius));
 	}
 	
-	public Quadrat getInQuadrat() {
-		return inQuadrat;
+	public Kreis getAussenKreis() {
+		return aussenKreis;
 	}
 	
-	public void setInQuadrat(Quadrat iq) {
-		inQuadrat = iq;
+	public void setAussenKreis(Kreis ak) {
+		aussenKreis = ak;
 	}
 	
 	public double berechneFlaeche() {
-		return super.berechneFlaeche() - inQuadrat.berechneFlaeche();
+		return aussenKreis.berechneFlaeche()-super.berechneFlaeche();
 	}
 	
 	public double berechneUmfang() {
-		return super.berechneUmfang() + inQuadrat.berechneUmfang();
+		return aussenKreis.berechneUmfang() + super.berechneUmfang();
 	}
 	
 	public String toString() {
 		return "Schablone" +"\n"
-				+"Anker (Kreis): " +getAnker() +"\n"
-				+"Radius (Kreis): " +getRadius() +"\n"
-				+"Anker (Quadrat): " 	+inQuadrat.getAnker() +"\n"
-				+"Breite (Quadrat): " +inQuadrat.getBreite() +"\n"
+				+"Anker (Quadrat): " +getAnker() +"\n"
+				+"Breite (Quadrat): " +getBreite() +"\n"
+				+"Anker (Kreis): " +aussenKreis.getAnker() +"\n"
+				+"Radius (Kreis): " +aussenKreis.getRadius() +"\n"
 				+"Gesamtfläche: " +berechneFlaeche() +"\n"
-				+"Fläche Kreis: " +super.berechneFlaeche() +"\n"
-				+"Fläche Quadrat: " +inQuadrat.berechneFlaeche() +"\n"
+				+"Fläche Quadrat: " +super.berechneFlaeche() +"\n"
+				+"Fläche Kreis: " +aussenKreis.berechneFlaeche() +"\n"
 				+"Gesamtumfang: " +berechneUmfang() +"\n"
-				+"Umfang Kreis: " +super.berechneUmfang() +"\n"
-				+"Umfang Inkreis: " +inQuadrat.berechneUmfang();
+				+"Umfang Quadrat: " +super.berechneUmfang() +"\n"
+				+"Umfang Kreis: " +aussenKreis.berechneUmfang();
 		
 	}
 }

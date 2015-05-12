@@ -2,31 +2,31 @@ package praesenz5;
 
 public class Quadrat extends Figur {
 
-	private int breite;
+	private double breite;
 	
 	public Quadrat() { 
 		super();
 		breite = 0;
 	}
 	
-	public Quadrat(Punkt p, int b) {
+	public Quadrat(Punkt p, double b) {
 		super(p);
 		breite = b;
 	}
 	
-	public int getBreite () {
+	public double getBreite () {
 		return breite;
 	}
 	
-	public void setBreite (int b) {
+	public void setBreite (double b) {
 		breite = b;
 	}
 	
-	public int berechneFlaeche() {
+	public double berechneFlaeche() {
 		return breite * breite;
 	}
 
-	public int berechneUmfang() {
+	public double berechneUmfang() {
 		return 4*breite;
 	}
 	
