@@ -1,31 +1,31 @@
 package praesenz5;
 
 public class Rechteck extends Quadrat {
-	private int laenge;
+	private double laenge;
 	
 	public Rechteck() {
 		super();
 		laenge = 0;
 	}
 	
-	public Rechteck(Punkt p, int b, int l) {
+	public Rechteck(Punkt p, double b, double l) {
 		super(p, b);
 		laenge = l;
 	}
 	
-	public int getLaenge() {
+	public double getLaenge() {
 		return laenge;
 	}
 	
-	public void setLaenge(int i) {
+	public void setLaenge(double i) {
 		laenge = i;
 	}
 	
-	public int berechneFlaeche() {
+	public double berechneFlaeche() {
 		return getBreite() * laenge;
 	}
 	
-	public int berechneUmfang() {
+	public double berechneUmfang() {
 		return 2*getBreite() + 2*laenge;
 	}
 	
