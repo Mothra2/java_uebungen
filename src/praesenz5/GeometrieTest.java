@@ -32,21 +32,32 @@ public class GeometrieTest {
 		
 		Rechteck r = new Rechteck(new Punkt(0,0), 2, 4);
 		System.out.println(r.berechneFlaeche());
+		System.out.println();
 //		Quadrat-Methode?
 		r.verschiebeAnker(4, 7);
 		System.out.println(r.getAnker());
 		System.out.println(r.getLaenge());
 		System.out.println(r.getBreite());
+		System.out.println();
 	
 //		Testen Sie die Klasse Dreieck!
 		Dreieck d = new Dreieck(new Punkt(0,0),3,5);
 		System.out.println(d.berechneFlaeche());
 		System.out.println(d.berechneUmfang());
+		System.out.println();
 		
 //		Test Ring
 		Ring ri = new Ring(new Punkt(0,0),3,2);
 		System.out.println(ri.berechneFlaeche());
+		System.out.println();
+		System.out.println(ri.berechneUmfang());
+		System.out.println();
 		System.out.println(ri.toString());
-
+		
+//		Test Schablone
+		Schablone s = new Schablone(new Punkt(0,0), 3,2);
+		System.out.println(s.berechneFlaeche());
+		System.out.println(s.berechneUmfang());
+		System.out.println(s.toString());
 	}
 }

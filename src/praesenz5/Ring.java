@@ -21,12 +21,28 @@ public class Ring extends Kreis {
 	}
 	
 	public double berechneFlaeche() {
-//		return super.berechneFlaeche() - berechneFlaecheInkreis(); Fehler!!!
-	}	
+		return super.berechneFlaeche() - berechneFlaecheInkreis(); // Fehler?
+	}
+	
+	public double berechneUmfangInkreis() {
+		return 2*Math.PI*inKreisRadius;
+	}
+	
+	public double berechneUmfang() {
+		return super.berechneUmfang() + berechneUmfangInkreis();
+	}
 	
 	public String toString() {
-	return "Anker: " +getAnker() +" Radius: " +getRadius() + "Inkreisradius: " +inKreisRadius +" Gesamtfläche: " +berechneFlaeche() +"\n"
-			+"Fläche Kreis: " +super.berechneFlaeche() +"Fläche Inkreis: " +berechneFlaeche();
+	return "Ring" +"\n"
+			+"Anker: " +getAnker() +"\n"
+			+"Radius: " +getRadius() +"\n"
+			+"Inkreisradius: " +inKreisRadius +"\n"
+			+"Gesamtfläche: " +berechneFlaeche() +"\n"
+			+"Fläche Kreis: " +super.berechneFlaeche() +"\n"
+			+"Fläche Inkreis: " +berechneFlaecheInkreis() +"\n"
+			+"Gesamtumfang: " +berechneUmfang() +"\n"
+			+"Umfang Kreis: " +super.berechneUmfang() +"\n"
+			+"Umfang Inkreis: " +berechneUmfangInkreis();
 	}
 	
 }

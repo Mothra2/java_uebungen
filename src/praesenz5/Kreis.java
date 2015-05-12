@@ -29,7 +29,7 @@ public class Kreis extends Figur {
 	}
 	
 	public String toString() {
-		return "Anker: " +getAnker() +" Radius: " +radius +" Fläche: " +berechneFlaeche();
+		return "Anker: " +getAnker() +" Radius: " +radius +" Fläche: " +berechneFlaeche() +" Umfang: " +berechneUmfang();
 	}
 	
 }
