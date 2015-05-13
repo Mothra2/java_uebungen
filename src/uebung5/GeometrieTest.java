@@ -61,7 +61,7 @@ public class GeometrieTest {
 		System.out.println(s.toString());
 
 //		Test Parallelogramm
-		Parallelogramm s = new Parallelogramm(new Punkt(0,0), 3,2);
+		Parallelogramm p = new praesenz5.Parallelogramm(new Punkt(0,0), 3, 2, 50);
 		System.out.println(s.berechneFlaeche());
 		System.out.println(s.berechneUmfang());
 		System.out.println(s.toString());
