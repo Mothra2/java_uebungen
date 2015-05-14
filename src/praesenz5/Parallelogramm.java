@@ -22,10 +22,10 @@ public class Parallelogramm extends Rechteck {
 	}
 	
 	public double berechneFlaeche() {
-		return getLaenge() * getBreite() * Math.sin(alpha);
+		return getLaenge() * getBreite();
 	}
 	
 	public String toString() {
-		return "";
+		return "todo";
 	}
 }
