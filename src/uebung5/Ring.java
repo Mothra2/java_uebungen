@@ -42,8 +42,7 @@ public class Ring extends Kreis {
 			+"Fläche Inkreis: " +berechneFlaecheInkreis() +"\n"
 			+"Gesamtumfang: " +berechneUmfang() +"\n"
 			+"Umfang Kreis: " +super.berechneUmfang() +"\n"
-			+"Umfang Inkreis: " +berechneUmfangInkreis()
-			+"\n";
+			+"Umfang Inkreis: " +berechneUmfangInkreis() +"\n";
 	}
 	
 }

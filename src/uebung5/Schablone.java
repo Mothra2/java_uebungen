@@ -8,7 +8,7 @@ public class Schablone extends Quadrat {
 		setAussenKreis(new Kreis());
 	}
 	
-	public Schablone(Punkt p, int breite, double radius) {
+	public Schablone(Punkt p, double breite, double radius) {
 		super(p,breite);
 		setAussenKreis(new Kreis(new Punkt(p.getX()+breite/2, p.getY()-breite/2), radius));
 	}
@@ -40,7 +40,7 @@ public class Schablone extends Quadrat {
 				+"Fläche Kreis: " +aussenKreis.berechneFlaeche() +"\n"
 				+"Gesamtumfang: " +berechneUmfang() +"\n"
 				+"Umfang Quadrat: " +super.berechneUmfang() +"\n"
-				+"Umfang Kreis: " +aussenKreis.berechneUmfang();
+				+"Umfang Kreis: " +aussenKreis.berechneUmfang() +"\n";
 		
 	}
 }

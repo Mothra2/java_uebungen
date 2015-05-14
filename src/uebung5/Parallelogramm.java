@@ -22,10 +22,14 @@ public class Parallelogramm extends Rechteck {
 	}
 	
 	public double berechneFlaeche() {
-		return getLaenge() * getBreite() * Math.sin(alpha);
+		return getLaenge() * getBreite() * Math.sin(Math.toRadians(alpha));
 	}
 	
 	public String toString() {
-		return "";
+		return "Ring:" +"\n"
+				+"Breite: " +getBreite() +"\n"
+				+"Länge: " +getLaenge() +"\n" 
+				+"Fläche: " +berechneFlaeche() +"\n"
+				+"Umfang: " +berechneUmfang() +"\n";
 	}
 }
