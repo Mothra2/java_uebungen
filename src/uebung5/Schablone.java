@@ -35,10 +35,10 @@ public class Schablone extends Quadrat {
 				+"Breite (Quadrat): " +getBreite() +"\n"
 				+"Anker (Kreis): " +aussenKreis.getAnker() +"\n"
 				+"Radius (Kreis): " +aussenKreis.getRadius() +"\n"
-				+"Gesamtfläche: " +berechneFlaeche() +"\n"
+				+"Fläche Schablone: " +berechneFlaeche() +"\n"
 				+"Fläche Quadrat: " +super.berechneFlaeche() +"\n"
 				+"Fläche Kreis: " +aussenKreis.berechneFlaeche() +"\n"
-				+"Gesamtumfang: " +berechneUmfang() +"\n"
+				+"Umfang Schablone: " +berechneUmfang() +"\n"
 				+"Umfang Quadrat: " +super.berechneUmfang() +"\n"
 				+"Umfang Kreis: " +aussenKreis.berechneUmfang() +"\n";
 		

@@ -26,7 +26,7 @@ public class Parallelogramm extends Rechteck {
 	}
 	
 	public String toString() {
-		return "Ring:" +"\n"
+		return "Parallelogramm:" +"\n"
 				+"Breite: " +getBreite() +"\n"
 				+"Länge: " +getLaenge() +"\n" 
 				+"Fläche: " +berechneFlaeche() +"\n"

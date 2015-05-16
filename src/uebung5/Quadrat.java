@@ -31,6 +31,9 @@ public class Quadrat extends Figur {
 	}
 	
 	public String toString() {
-		return "Anker: " +getAnker() +" Breite: "  +breite +" Fläche: " +berechneFlaeche();
+		return "Anker: " +getAnker() +"\n"
+				+"Breite: "  +breite+"\n"
+				+"Fläche: " +berechneFlaeche() +"\n"
+				+"Umfang: " +berechneUmfang() +"\n";
 	}
 }

@@ -22,5 +22,9 @@ public class Figur {
 	public void verschiebeAnker(int x, int y) {
 		anker.verschiebe(x,y);
 	}
+	
+	public String toString() {
+		return "Anker: " +anker;
+	}
 		
 }
