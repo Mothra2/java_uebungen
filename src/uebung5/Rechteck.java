@@ -1,5 +1,9 @@
 package uebung5;
 
+/**
+ * @author Jörg Holger, 550352
+ */
+
 public class Rechteck extends Quadrat {
 	private double laenge;
 	

@@ -1,5 +1,9 @@
 package uebung5;
 
+/**
+ * @author Jörg Holger, 550352
+ */
+
 public class Punkt {
 	private double x;
 	private double y;
