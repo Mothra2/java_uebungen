@@ -30,7 +30,9 @@ public class Rechteck extends Quadrat {
 	}
 	
  	public String toString() {
- 		return "Breite: " +getBreite() +" Länge: " +getLaenge() +" Fläche: " +berechneFlaeche();
+ 		return "Breite: " +getBreite() +"\n"
+ 				+" Länge: " +getLaenge() +"\n"
+ 				+" Fläche: " +berechneFlaeche() +"\n";
  	}
 
 }

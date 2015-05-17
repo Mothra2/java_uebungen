@@ -12,7 +12,7 @@ public class Ring extends Kreis {
 		inKreisRadius = ir;
 	}
 	
-	public double getInkreisRadius(double ir) {
+	public double getInkreisRadius() {
 		return inKreisRadius;
 	}
 	

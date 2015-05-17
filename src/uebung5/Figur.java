@@ -24,7 +24,7 @@ public class Figur {
 	}
 	
 	public String toString() {
-		return "Anker: " +anker;
+		return "Anker: " +anker +"\n";
 	}
 		
 }
