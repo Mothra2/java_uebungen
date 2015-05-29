@@ -5,10 +5,13 @@ public class ListeTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Person[] studenten = Verwaltung.listeAnlegen(new Student("Stefanie", "Müller", 'w', 10003),
+				 									 new Student("Esther", "Schweins", 'w', 22233), 
 													 new Student("Thomas","Becker", 'm', 24550),
+													 new Student("Bastian", "Schweinsteiger", 'm', 11122),
 													 new Student("Silvia", "Maier", 'w', 36687),
 													 new Student("Barbara", "Schuster", 'w', 23341),
 													 new Student("Martin", "Becker", 'm', 52236));
+													
 		
 		Person[] dozenten = Verwaltung.listeAnlegen(new Dozent("Joseph", "Weizenbaum", 'm', 100),
 													new Dozent("Ada", "Lovelace", 'w', 100),

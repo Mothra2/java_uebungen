@@ -1,4 +1,4 @@
-package uebung6;
+ package uebung6;
 
 public class Verwaltung {
 
@@ -52,21 +52,21 @@ public class Verwaltung {
 	
 	public static boolean vergleicheNachname(Person person1, Person person2) {
 		
-		int laenge = person1.getNachname().length();
-		
-		if(laenge > person2.getNachname().length()) { // Länge des kürzeren Namens wird bestimmt und "laenge" zugewiesen
-			laenge = person2.getNachname().length();
+		int laengeKuerzererName = person1.getNachname().length();
+				
+		if(laengeKuerzererName > person2.getNachname().length()) { // Länge des kürzeren Namens wird bestimmt und "laenge" zugewiesen
+			laengeKuerzererName = person2.getNachname().length();
 		}
 
 		boolean abbruch = false;
 		boolean nachnameEinsZuerst = true;
 		int j = 0;
 		
-		while(!abbruch && j < laenge) {
+		while(!abbruch && j < laengeKuerzererName) {
 		// Die Zeichen der Nachname-Strings von person1 und person2 an Index (j) werden miteinander verglichen. Sind die Zeichen identisch, wird j um 1 erhöht.
-		// Das geschieht so lange, bis sie sich in einem Zeichen unterscheiden oder der letzte Buchstabe des kürzeren Worts erreicht ist.			
+		// Das geschieht so lange, bis die Strings sich in einem Zeichen unterscheiden oder der letzte Buchstabe des kürzeren Worts erreicht ist.			
 		// Unterscheiden sie sich in einem Zeichen, wird verglichen, welcher Unicode-Wert der beiden Zeichen niedriger ist.
-		// Liegt der Nachname von person1 lexikalisch vor person2 oder sind bei Namen identisch, bleibt nachNameEins "true" und wird zurückgegeben.
+		// Liegt der Nachname von person1 lexikalisch vor person2, bleibt nachNameEins "true" und wird zurückgegeben.
 		// Liegt der Nachname von person2 lexikalisch vor person1, wird nachNameEins auf "false" gesetzt und zurückgegeben.
 		  	
 			if(person1.getNachname().charAt(j) == person2.getNachname().charAt(j)) {
@@ -81,6 +81,9 @@ public class Verwaltung {
 					abbruch = true;
 				}
 			}
+		}
+		if(abbruch == false && person1.getNachname().length() > person2.getNachname().length()) {
+			nachnameEinsZuerst = !nachnameEinsZuerst;
 		}
 		return nachnameEinsZuerst; 
 	}	
