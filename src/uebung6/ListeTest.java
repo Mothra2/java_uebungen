@@ -1,5 +1,9 @@
 package uebung6;
 
+/**
+ * @author Jörg Holger, 550352
+ */
+
 public class ListeTest {
 
 	public static void main(String[] args) {

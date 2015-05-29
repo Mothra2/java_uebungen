@@ -1,5 +1,9 @@
  package uebung6;
 
+ /**
+  * @author Jörg Holger, 550352
+  */
+ 
 public class Verwaltung {
 
 	public static Person[] listeAnlegen(Person... personen) {
