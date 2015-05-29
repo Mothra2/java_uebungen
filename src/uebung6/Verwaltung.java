@@ -19,7 +19,7 @@ public class Verwaltung {
 	}
 
 	public static void listeSortieren(Person[] liste) {
-		//Sortieralgorithmus aus der Präsenzübung.
+		// Aus der Präsenzübung.
 		int i = 0;
 		
 		while (i < liste.length) {
@@ -51,11 +51,15 @@ public class Verwaltung {
 	}
 	
 	public static boolean vergleicheNachname(Person person1, Person person2) {
+		// gibt zurück, welcher der Nachnamen der beiden übergebenen Personen der lexikographisch erste ist.
+        //  Rückgabe true, wenn person1.Nachname lexikographisch zuerst, false, wenn person2.Nachname lexikographisch zuerst
 		
-		int laengeKuerzererName = person1.getNachname().length();
+		String nachname1 = person1.getNachname().toLowerCase(); // beide Nachname-String werden in Kleinbuchstaben umgewandelt, um sie korrekt vergleichen zu können
+		String nachname2 = person2.getNachname().toLowerCase();
+		int laengeKuerzererName = nachname1.length();
 				
-		if(laengeKuerzererName > person2.getNachname().length()) { // Länge des kürzeren Namens wird bestimmt und "laenge" zugewiesen
-			laengeKuerzererName = person2.getNachname().length();
+		if(laengeKuerzererName > nachname2.length()) { // Länge des kürzeren Namens wird bestimmt und "laenge" zugewiesen
+			laengeKuerzererName = nachname2.length();
 		}
 
 		boolean abbruch = false;
@@ -63,28 +67,27 @@ public class Verwaltung {
 		int j = 0;
 		
 		while(!abbruch && j < laengeKuerzererName) {
-		// Die Zeichen der Nachname-Strings von person1 und person2 an Index (j) werden miteinander verglichen. Sind die Zeichen identisch, wird j um 1 erhöht.
-		// Das geschieht so lange, bis die Strings sich in einem Zeichen unterscheiden oder der letzte Buchstabe des kürzeren Worts erreicht ist.			
+		// Die Zeichen der Nachname-Strings an Index (j) werden miteinander verglichen.
+        // Das geschieht so lange, bis die Strings sich in einem Zeichen unterscheiden oder der letzte Buchstabe des kürzeren Worts erreicht ist.			
 		// Unterscheiden sie sich in einem Zeichen, wird verglichen, welcher Unicode-Wert der beiden Zeichen niedriger ist.
-		// Liegt der Nachname von person1 lexikalisch vor person2, bleibt nachNameEins "true" und wird zurückgegeben.
-		// Liegt der Nachname von person2 lexikalisch vor person1, wird nachNameEins auf "false" gesetzt und zurückgegeben.
+		
 		  	
-			if(person1.getNachname().charAt(j) == person2.getNachname().charAt(j)) {
+			if(nachname1.charAt(j) == nachname2.charAt(j)) { // sind die Zeichen am Index j identisch, wird j um 1 erhöht 
 				j++;
 			}
 			else {
-				if(person1.getNachname().charAt(j) < person2.getNachname().charAt(j)) {
-					abbruch = true;
+				if(nachname1.charAt(j) < nachname2.charAt(j)) { // der Unicode-Wert des verglichenen Zeichens von nachname1 ist kleiner,
+					abbruch = true; 							// nachname1 liegt also lexikographisch vor nachname2
 				}
-				else {
-					nachnameEinsZuerst = false;
+				else {											// der Unicode-Wert des verglichenen Zeichens von nachname2 ist kleiner,
+					nachnameEinsZuerst = false;					// nachname2 liegt also lexikographisch vor nachname1
 					abbruch = true;
 				}
 			}
 		}
-		if(abbruch == false && person1.getNachname().length() > person2.getNachname().length()) {
-			nachnameEinsZuerst = !nachnameEinsZuerst;
-		}
+		if(abbruch == false && nachname1.length() > nachname2.length()) { // entspricht ein String den ersten Zeichen des anderen Strings, 
+			nachnameEinsZuerst = !nachnameEinsZuerst;                     // wird untersucht, ob nachname1 länger als nachname2 ist.										
+		}                                                                 // In diesem Fall liegt nachname2 lexikograpisch vor nachname1
 		return nachnameEinsZuerst; 
 	}	
 }
