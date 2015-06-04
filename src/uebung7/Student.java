@@ -1,19 +1,24 @@
 package uebung7;
 
 public class Student extends Privatperson {
-	private String Hochschule;
+	private String hochschule;
+	
+	public Student(String vorname, String nachname, String hochschule ) {
+		super(vorname,nachname);
+		this.hochschule = hochschule;
+	}
 
 	public String getHochschule() {
-		return Hochschule;
+		return hochschule;
 	}
 
 	public void setHochschule(String hochschule) {
-		Hochschule = hochschule;
+		this.hochschule = hochschule;
 	}
 
 	@Override
 	public String toString() {
-		return "Student [Hochschule=" + Hochschule + "]";
+		return super.toString() +"[Hochschule=" +hochschule +"]";
 	}
 
 	@Override

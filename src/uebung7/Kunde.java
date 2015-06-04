@@ -1,7 +1,7 @@
 package uebung7;
 /**
 * Schnittstelle Kunde <br>
-* Klassen, die diese Schnittstelle implementieren sind Kunden eines Reiseanbieters
+* Klassen, die diese Schnittstelle implementieren, sind Kunden eines Reiseanbieters
 * @author Adrianna Alexander
 * @version 1.0
 */	

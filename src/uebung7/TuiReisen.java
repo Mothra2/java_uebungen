@@ -1,10 +1,31 @@
 package uebung7;
 
 public class TuiReisen implements Reiseanbieter {
-
+	
+	private final double PREISBUS = 25;
+	private final double PREISBAHN = 40;
+	private final double DISTANZSTRASSE = 288.2;
+	private final double DISTANZSCHIENE = 310;
+	private Bus bus;
+	private Bahn bahn;
+	
+	public TuiReisen(Bus bus, Bahn bahn) {
+		this.bus = bus;
+		this.bahn = bahn;
+	}
+	
 	@Override
 	public boolean buchen(Kunde k, int transport) {
-		// TODO Auto-generated method stub
+		switch (transport) {
+			case 1: //bus
+					break;
+			case 2: //bahn
+				break;
+			case 3: //egal
+				break;	
+			default: System.out.println("Bitte zulässige Option Bus(1), Bahn(2) oder Egal(3) wählen.");	
+		}
+		
 		return false;
 	}
 

@@ -1,8 +1,13 @@
 package uebung7;
 
 public class Privatperson implements Kunde {
-	private String Vorname;
-	private String Nachnachme;
+	private String vorname;
+	private String nachname;
+	
+	public Privatperson(String vn, String nn) {
+		vorname = vn;
+		nachname = nn;
+	}
 	
 	@Override
 	public String toString() {
