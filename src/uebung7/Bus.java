@@ -3,44 +3,31 @@ package uebung7;
 public class Bus implements Transportmittel {
 	
 	private double geschwindigkeit;
-	private int passagiere;
+	private int plaetze;
 	
 	public Bus() {
 		geschwindigkeit = 0;
-		passagiere = 0;
+		plaetze = 0;
 	}
 	
-	public Bus(double geschwindigkeit, int passagiere) {
+	public Bus(double geschwindigkeit, int plaetze) {
 		this.geschwindigkeit = geschwindigkeit;
-		this.passagiere = passagiere;
+		this.plaetze = plaetze;
+	}	
 	
-	public int getPassagiere() {
-		return passagiere;
-	}
-
-	public void setPassagiere(int passagiere) {
-		this.passagiere = passagiere;
-	}
-
-	@Override
 	public double getGeschwindigkeit() {
-		// TODO Auto-generated method stub
-		return 0;
+		return geschwindigkeit;
 	}
 	
 	public void setGeschwindigkeit(double geschwindigkeit) {
-		this.geschwindigkeit = geschwindigkeit;
-	}
-
-	
+			this.geschwindigkeit = geschwindigkeit;
 	}
 	
-	
-
-	@Override
 	public int getAnzahlPlaetze() {
-		// TODO Auto-generated method stub
-		return 0;
+		return plaetze;
 	}
-
+	
+	public void setAnzahlPlaetze(int plaetze) {
+		this.plaetze = plaetze;
+	}
 }

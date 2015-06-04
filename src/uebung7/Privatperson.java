@@ -11,20 +11,20 @@ public class Privatperson implements Kunde {
 	
 	@Override
 	public String toString() {
-		return "Privatperson [Vorname=" + Vorname + ", Nachnachme="
-				+ Nachnachme + "]";
+		return "Privatperson [Vorname=" +vorname + ", Nachname="
+				+nachname + "]";
 	}
 	public String getVorname() {
-		return Vorname;
+		return vorname;
 	}
 	public void setVorname(String vorname) {
-		Vorname = vorname;
+		this.vorname = vorname;
 	}
 	public String getNachnachme() {
-		return Nachnachme;
+		return nachname;
 	}
 	public void setNachnachme(String nachnachme) {
-		Nachnachme = nachnachme;
+		this.nachname = nachnachme;
 	}
 	@Override
 	public void empfangeNachricht(String nachricht) {

@@ -15,15 +15,32 @@ public class TuiReisen implements Reiseanbieter {
 	}
 	
 	@Override
-	public boolean buchen(Kunde k, int transport) {
+	public boolean buchen(Kunde kunde, int transport) {
 		switch (transport) {
-			case 1: //bus
-					break;
-			case 2: //bahn
+			case 0:
+				
+						
+			case 1:
+				if (bus.getAnzahlPlaetze()>0) {
+					bus.setAnzahlPlaetze(bus.getAnzahlPlaetze()-1);
+					buchungBestaetigen(kunde, transport);
+				}
+				else {
+					buchungAblehnen(kunde, transport);
+				}
+				
 				break;
-			case 3: //egal
+				
+			case 2: 
+				if (bahn.getAnzahlPlaetze()>0) {
+					bahn.setAnzahlPlaetze(bahn.getAnzahlPlaetze()-1);
+					buchungBestaetigen(kunde, transport);
+				}
+				else {
+					buchungAblehnen(kunde, transport);
+				}
 				break;	
-			default: System.out.println("Bitte zulässige Option Bus(1), Bahn(2) oder Egal(3) wählen.");	
+			default: System.out.println("Bitte zulässige Option Egal(0), Bus(1) oder Bahn(2) wählen.");	
 		}
 		
 		return false;
@@ -67,14 +84,36 @@ public class TuiReisen implements Reiseanbieter {
 
 	@Override
 	public double preisErfragen(Kunde k, int transport) {
-		// TODO Auto-generated method stub
-		return 0;
+		double preis = 0;
+		
+		switch (transport) {
+		case 0: System.out.println("Bitte Bus(1) oder Bahn(2) wählen.");
+		 		break;
+		case 1: preis = PREISBUS;
+				break;
+		case 2: preis = PREISBAHN;
+				break;
+		default: System.out.println("Bitte ein Transportmittel angeben.");
+				break;
+		}
+		return preis;
 	}
 
 	@Override
 	public double dauerErfragen(Kunde k, int transport) {
-		// TODO Auto-generated method stub
-		return 0;
+		double dauer = 0;
+		
+		switch (transport) {
+		case 0: System.out.println("Bitte Bus(1) oder Bahn(2) wählen.");
+		 		break;
+		case 1: dauer = DISTANZSTRASSE/bus.getGeschwindigkeit();
+				break;
+		case 2: preis = DISTANZSCHIENE/bus.getGeschwindigkeit(); 
+				break;
+		default: System.out.println("Bitte ein Transportmittel angeben.");
+				break;
+		}
+		return dauer;
 	}
 
 }

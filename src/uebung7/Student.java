@@ -16,15 +16,14 @@ public class Student extends Privatperson {
 		this.hochschule = hochschule;
 	}
 
-	@Override
-	public String toString() {
-		return super.toString() +"[Hochschule=" +hochschule +"]";
-	}
-
-	@Override
 	public void empfangeNachricht(String nachricht) {
 		// TODO Auto-generated method stub
 		
 	}
 	
+	public String toString() {
+		return super.toString() +"[Hochschule=" +hochschule +"]";
+	}
+
+		
 }

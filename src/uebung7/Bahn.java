@@ -3,40 +3,34 @@ package uebung7;
 public class Bahn implements Transportmittel {
 	
 	private double geschwindigkeit;
-	private double passagiere;
+	private int plaetze;
 	
 	public Bahn() {
 		geschwindigkeit = 0;
-		passagiere = 0;
+		plaetze = 0;
 	}	
 	
-	public Bahn(double geschwindigkeit, int passagiere) {
+	public Bahn(double geschwindigkeit, int plaetze) {
 		this.geschwindigkeit = geschwindigkeit;
-		this.passagiere = passagiere;
+		this.plaetze = plaetze;
 	}
 
-	@Override
 	public double getGeschwindigkeit() {
-		// TODO Auto-generated method stub
-		return 0;
+		return geschwindigkeit;
+	}
+	
+	public void setGeschwindigkeit(double geschwindigkeit) {
+			this.geschwindigkeit = geschwindigkeit;
 	}
 
-	@Override
 	public int getAnzahlPlaetze() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
-	public double getPassagiere() {
-		return passagiere;
+	
+	public void setAnzahlPlaetze(int plaetze) {
+		this.plaetze = plaetze;
 	}
-
-	public void setPassagiere(double passagiere) {
-		this.passagiere = passagiere;
-	}
-
-	public void setGeschwindigkeit(double geschwindigkeit) {
-		this.geschwindigkeit = geschwindigkeit;
-	}
-
 }
+
+
