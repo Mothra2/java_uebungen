@@ -28,7 +28,6 @@ public class TuiReisen implements Reiseanbieter {
 				else {
 					buchungAblehnen(kunde, transport);
 				}
-				
 				break;
 				
 			case 2: 
