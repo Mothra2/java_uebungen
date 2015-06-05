@@ -102,8 +102,7 @@ public class SinglyLinkedList implements listable {
 			else {
 				Node pointer = head;
 				
-				int i = 2;
-				for(i = 2; i < node; i++) { // Pointer läuft bis zum (k-1). Node
+				for(int i = 2; i < node; i++) { // Pointer läuft bis zum (k-1). Node
 					pointer = pointer.getNext();
 				}
 				pointer.setNext(pointer.getNext().getNext());

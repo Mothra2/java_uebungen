@@ -41,7 +41,7 @@ public class SinglyLinkedListTest {
 		
 		// Knoten löschen
 		System.out.println();
-		list.deleteNode(3);
+		list.deleteNode(-1);
 		list.printList();
 	}
 
