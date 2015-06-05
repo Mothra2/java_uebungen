@@ -1,4 +1,4 @@
-package SinglyLinkedList;
+package singlyLinkedList;
 
 enum Studiengang {
 		Informatik,

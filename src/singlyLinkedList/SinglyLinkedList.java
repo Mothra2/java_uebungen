@@ -1,4 +1,4 @@
-package SinglyLinkedList;
+package singlyLinkedList;
 
 public class SinglyLinkedList implements listable {
 	Node head;
