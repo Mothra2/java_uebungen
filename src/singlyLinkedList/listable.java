@@ -12,5 +12,11 @@ public interface listable {
 	
 	public void printNode(Node node);
 	
+	public void printList();
 	
+	public int numberOfNodes();
+	
+	public void deleteNode(int node);
+	
+	public void deleteList();
 }

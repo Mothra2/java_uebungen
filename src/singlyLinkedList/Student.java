@@ -1,12 +1,12 @@
 package singlyLinkedList;
 
 enum Studiengang {
-		Informatik,
-		Mathematik,
+		INFORMATIK,
+		MATHEMATIK,
 		BWL,
-		Anglistik,
-		Romanistik,
-		Linguistik
+		ANGLISTIK,
+		ROMANISTIK,
+		LINGUISTIK
 	}
 
 public class Student {
@@ -20,7 +20,7 @@ public class Student {
 		vorname = "Martina";
 		nachname = "Musterfrau";
 		matrikel = 00000;
-		studiengang = Studiengang.Informatik;
+		studiengang = Studiengang.INFORMATIK;
 	}
 	
 	public Student(String vorname, String nachname, int matrikel, Studiengang sg) {
