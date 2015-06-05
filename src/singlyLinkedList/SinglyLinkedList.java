@@ -3,14 +3,14 @@ package singlyLinkedList;
 public class SinglyLinkedList implements listable {
 	private Node head;
 	
-	public Node createNode(Student student) {
+	public Node createNode(Student student) { //getestet
 		Node node = new Node();
 		node.setStudent(student);
 		return node;
 	}
 		
 	@Override
-	public void addFirst(Student student) {
+	public void addFirst(Student student) { // getestet
 		if(head == null) { 
 			head = createNode(student);
 			head.setNext(null);
@@ -23,7 +23,7 @@ public class SinglyLinkedList implements listable {
 	}
 
 	@Override
-	public void addLast(Student student) {
+	public void addLast(Student student) { // getestet
 		if(head == null) { 
 			head = createNode(student);
 			head.setNext(null);
@@ -38,7 +38,7 @@ public class SinglyLinkedList implements listable {
 		}
 	}
 	
-	public Node getNode(int number) {
+	public Node getNode(int number) { // getestet
 		if(number > 0 && number <= numberOfNodes()) {
 			Node pointer = head;
 			
@@ -53,14 +53,14 @@ public class SinglyLinkedList implements listable {
 		}
 	}
 	
-	public void printNode(Node node) {
+	public void printNode(Node node) { // getestet
 		if(node != null) {
 			System.out.println(node.getStudent().toString());
 		}
 	}	
 		
 	
-	public void printList() {
+	public void printList() { // getestet
 		if(head != null) {
 			if (head.getNext() == null) {
 				printNode(head);
@@ -78,7 +78,7 @@ public class SinglyLinkedList implements listable {
 		}
 	}
 	
-	public int numberOfNodes() {
+	public int numberOfNodes() { // getestet
 		int number = 0;
 		
 		if(head != null) {
@@ -92,30 +92,29 @@ public class SinglyLinkedList implements listable {
 		return number;
 	}
 		
-	public void deleteNode(int node) {
+	public void deleteNode(int node) { // getestet
 	// TODO
-		if(node >= 0 && node < numberOfNodes())
+		if(node > 0 && node <= numberOfNodes())
 			
-			if (node == 0) { // 1. Node soll gelöscht werden, head wird auf 2. Element gesetzt
+			if (node == 1) { // 1. Node soll gelöscht werden, head wird auf 2. Element gesetzt
 				head = head.getNext(); // 
 			}	
 			else {
 				Node pointer = head;
 				
-				int i = 1;
-				while(i < node) { // Pointer läuft bis zum (k-1). Node
+				int i = 2;
+				for(i = 2; i < node; i++) { // Pointer läuft bis zum (k-1). Node
 					pointer = pointer.getNext();
-					i++;
 				}
 				pointer.setNext(pointer.getNext().getNext());
 			}	
 		else {
-			System.out.println("Please enter number between 0 and " +numberOfNodes() +".");			
+			System.out.println("Please enter a number between 1 and " +numberOfNodes() +".");			
 		}		
 	}
 
 		
-	public void deleteList() {
+	public void deleteList() { // getestet
 		head = null;
 	}
 	

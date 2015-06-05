@@ -36,8 +36,13 @@ public class SinglyLinkedListTest {
 //		System.out.println(list.numberOfNodes());
 		
 		// Knoten zurückgeben
+//		System.out.println();
+//		list.printNode(list.getNode(3));
+		
+		// Knoten löschen
 		System.out.println();
-		list.printNode(list.getNode(3));
+		list.deleteNode(3);
+		list.printList();
 	}
 
 }
