@@ -19,4 +19,6 @@ public interface listable {
 	public void deleteNode(int node);
 	
 	public void deleteList();
+	
+	public Node linearSearch(int option, String searchString);
 }

@@ -117,6 +117,22 @@ public class SinglyLinkedList implements listable {
 		head = null;
 	}
 	
+	public Node linearSearch(int option, String searchString) {
+		switch(option) {
+			case 1:	
+					break;
+			case 2:
+					break;
+			case 3:
+					break;
+			case 4:
+					break;
+			default:
+		}		
+				
+		return null;
+	}
+	
 	
 }
 	
