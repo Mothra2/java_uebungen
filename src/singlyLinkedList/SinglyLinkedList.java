@@ -117,11 +117,50 @@ public class SinglyLinkedList implements listable {
 		head = null;
 	}
 	
-	public Node linearSearch(int option, String searchString) {
+	public Node search(int option, String suchString) {
+		Student searchStudent = new Student(); // leeren Standardkonstruktor bauen
+		 
+		switch (option) {
+		case 1:
+			searchStudent.setVorname(suchString);
+			break;
+			
+		case 2:
+			searchStudent.setNachname(suchString);
+			break;
+			
+		case 3:
+			searchStudent.setMatrikel(Integer.parseInt(suchString));
+			break;
+		case 4:
+			searchStudent.setStudiengang(;
+			if (head.getStudent().getStudiengang())
+			
+				if (head.getStudent().vorname.equalsIgnoreCase(searchString)) {
+					return head;
+				}	
+				else {
+					Node pointer = head.getNext();
+					boolean found = false;
+					
+					while(pointer != null && !found ) {
+						if (pointer.getStudent().vorname.equalsIgnoreCase(searchString)) {
+							found = true;
+						}
+					return pointer;
+						break;
+				}		
+				
+				
+			}
+			
+		}
+		
+		
 		switch(option) {
 			case 1:	
 					break;
-			case 2:
+			case 2: ;
 					break;
 			case 3:
 					break;
@@ -133,7 +172,7 @@ public class SinglyLinkedList implements listable {
 		return null;
 	}
 	
-	
+	public search
 }
 	
 	
